@@ -26,15 +26,16 @@ def optimization(n_w1,n_w2,alpha,beta):
 w_1 = 0
 w_2 = -2
 
-#学習率
-alpha = 0.5
-#忘却率
-beta = 0.0001
+#学習率 (100000回計算では0.5でいい感じ)
+alpha = 0.2
+#忘却率 (100000回計算では0.0001でいい感じ)
+#最終的にこの値幅で解が振動しだす
+beta = 0.001
 
 result_x = []
 result_y = []
 
-for i in range (100000):
+for i in range (40000):
 	w_1, w_2 = optimization(w_1,w_2,alpha,beta)
 
 	if i % 10000 == 0:
