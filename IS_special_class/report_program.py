@@ -35,8 +35,10 @@ beta = 0.001
 result_x = []
 result_y = []
 
-for i in range (40000):
+for i in range (100000):
 	w_1, w_2 = optimization(w_1,w_2,alpha,beta)
+	#お遊び : alphaを徐々に変えてみる
+	#alpha = alpha * 0.9999
 
 	if i % 10000 == 0:
 		print(w_1,w_2)
