@@ -55,9 +55,10 @@ for i in range (10000):
 print(len(opt_x))
 
 for i in range (len(opt_x)):
-	print(i)
-	plt.plot([obl_x[i], opt_x[i]],[obl_y[i], opt_y[i]], color = 'blue')
-	plt.plot([opt_x[i], obl_x[i+1]],[opt_y[i], obl_y[i+1]], color = 'red')
+	if i % 100 == 0:
+		print(i)
+	plt.plot([obl_x[i], opt_x[i]],[obl_y[i], opt_y[i]], color = 'orange')
+	plt.plot([opt_x[i], obl_x[i+1]],[opt_y[i], obl_y[i+1]], color = 'green')
 
 
 plt.xlabel("w_1")
